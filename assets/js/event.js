@@ -5,9 +5,10 @@ const d = document;
 export function event() {
   runSlider();
 
-  d.addEventListener("keypress", (e) => {
+  d.addEventListener("keyup", (e) => {
     const errorMessage = d.querySelector(".form-error-message");
     const button = d.querySelector("form button");
+ 
     if (!isValid(e.target)) {
       errorMessage.style.display = "block";
       button.disabled = true;
