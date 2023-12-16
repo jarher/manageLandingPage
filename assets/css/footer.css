@@ -11,6 +11,7 @@ footer form {
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr;
   column-gap: 7px;
+  position: relative;
 }
 footer form input {
   background-color: white;
@@ -19,6 +20,9 @@ footer form input {
   padding: 10px 15px;
   border-radius: 15px;
   box-sizing: border-box;
+}
+footer form input:invalid {
+  color: var(--Bright-Red);
 }
 footer form button {
   padding: 10px;
@@ -30,8 +34,16 @@ footer form button {
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
-footer form button:hover{
- background-color: hsl(12deg 73.99% 81.14%);
+footer form button:hover {
+  background-color: hsl(12deg 73.99% 81.14%);
+}
+.form-error-message {
+  color: var(--Bright-Red);
+  transition: all 0.2s ease-in-out;
+  font-size: 0.7rem;
+  display: none;
+  position: absolute;
+  margin-top: 45px;
 }
 .footer-nav-container {
   width: 100%;
@@ -56,7 +68,7 @@ footer form button:hover{
   text-align: left;
   transition: all 0.2s ease-in-out;
 }
-.footer-nav-container menu li a:hover{
+.footer-nav-container menu li a:hover {
   color: var(--Bright-Red);
 }
 .social-media-container {
@@ -84,6 +96,9 @@ footer form button:hover{
 .social-media-container menu li:hover path {
   fill: var(--Bright-Red);
 }
+footer .logo-container{
+  width: auto;
+}
 .logo-name {
   fill: var(--Very-Light-Gray);
 }
@@ -106,11 +121,12 @@ footer form button:hover{
     order: 3;
     width: 50%;
   }
-  footer form input:focus{
+  footer form input:focus {
     outline: 2px solid var(--Bright-Red);
   }
-  footer form input:invalid{
-    color:var(--Bright-Red);
+
+  .form-error-message {
+    padding-left: 20px;
   }
   .footer-nav-container {
     order: 2;

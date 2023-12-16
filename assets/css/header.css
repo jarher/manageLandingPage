@@ -22,6 +22,8 @@ header {
   right: 0;
   bottom: 0;
   background: linear-gradient(180deg, transparent, hsla(227deg 12% 61% / 90%));
+  transition: all 0.2s ease-in-out;
+  z-index: 1;
 }
 .main-nav menu {
   margin: 10px 25px;
@@ -33,6 +35,8 @@ header {
   background-color: var(--Very-Light-Gray);
   border-radius: 3px;
   box-sizing: border-box;
+  transform: scale(0.5);
+  transition: all 0.2s ease-in-out;
 }
 .main-nav menu li {
   list-style: none;
@@ -45,8 +49,8 @@ header {
   font-size: 0.8rem;
   transition: all 0.2s ease-in-out;
 }
-.main-nav menu li a:hover{
-  color:var(--Dark-Grayish-Blue);
+.main-nav menu li a:hover {
+  color: var(--Dark-Grayish-Blue);
 }
 .buttons-content .getStarted-button {
   display: none;
@@ -69,6 +73,8 @@ header {
     position: relative;
     background: none;
     top: 0;
+    opacity: 1 !important;
+    display: block !important;
   }
   .main-nav menu {
     margin: 10px 25px;
@@ -80,6 +86,8 @@ header {
     background-color: transparent;
     border-radius: 3px;
     box-sizing: border-box;
+    opacity: 1 !important;
+    transform: scale(1);
   }
   .main-nav menu li a {
     font-size: 0.625rem;
@@ -90,4 +98,7 @@ header {
   .buttons-content .menu-icon {
     display: none;
   }
+}
+.menu-scale {
+  transform: scale(1) !important;
 }
