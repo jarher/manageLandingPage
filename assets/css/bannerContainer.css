@@ -21,6 +21,11 @@
   border-radius: 20px;
   margin-top: 25px;
 }
+@media (min-width: 768px) {
+  .banner-button {
+    width: 20%;
+  }
+}
 @media (min-width: 1024px) {
   .banner-container {
     padding: 5% 10%;

@@ -1,3 +1,5 @@
+import { addClass, removeClass } from "./utils.js";
+
 export function runSlider() {
   let unit = 50;
   let count = 0;
@@ -22,8 +24,8 @@ export function runSlider() {
 
     sliderIndicators.forEach((slider) => {
       Number.parseInt(slider.dataset.index) == count
-        ? slider.classList.add("slider-indicator-active")
-        : slider.classList.remove("slider-indicator-active");
+        ? addClass(slider, "slider-indicator-active")
+        : removeClass(slider, "slider-indicator-active");
     });
 
     document.querySelector(".slider").scrollBy(moveX, 0);

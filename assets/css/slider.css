@@ -8,7 +8,7 @@
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 }
-.slider::-webkit-scrollbar{
+.slider::-webkit-scrollbar {
   height: 10px;
 }
 .slider-item {
@@ -40,10 +40,24 @@
   color: var(--Dark-Grayish-Blue);
   line-height: 1.4rem;
 }
+@media (min-width: 758px) {
+  .user-name {
+    font-size: 0.9rem;
+  }
+  .user-comment {
+    font-size: 0.9rem;
+  }
+  .slider-item {
+    min-width: 50%;
+  }
+  .slider-indicator-container{
+    display: none;
+  }
+}
 @media (min-width: 1024px) {
   .slider {
     max-width: 100%;
-    margin:0 0 30px;
+    margin: 0 0 30px;
   }
   .slider-item {
     min-width: 32.5%;

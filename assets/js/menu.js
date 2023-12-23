@@ -1,25 +1,28 @@
+import { addClass, removeClass, toggleClass } from "./utils.js";
+
 export function toggleMenu() {
   const mainMenuContainer = document.querySelector(".main-nav");
   const menu = mainMenuContainer.querySelector("menu");
 
+
   if (!mainMenuContainer.classList.contains("hidden")) {
-    menu.classList.toggle("opacity-0");
-    menu.classList.remove("menu-scale");
+    toggleClass(menu, "opacity-0");
+    removeClass(menu, "menu-scale");
     setTimeout(() => {
-      mainMenuContainer.classList.toggle("opacity-0");
+      toggleClass(mainMenuContainer, "opacity-0");
       setTimeout(() => {
-        mainMenuContainer.classList.toggle("hidden");
+        toggleClass(mainMenuContainer, "hidden");
       }, 400);
     }, 300);
 
     return;
   } else {
-    mainMenuContainer.classList.toggle("hidden");
+    toggleClass(mainMenuContainer, "hidden");
     setTimeout(() => {
-      mainMenuContainer.classList.toggle("opacity-0");
+      toggleClass(mainMenuContainer, "opacity-0");
       setTimeout(() => {
-        menu.classList.toggle("opacity-0");
-        menu.classList.add("menu-scale");
+        toggleClass(menu, "opacity-0");
+        addClass(menu, "menu-scale");
       }, 0);
     }, 300);
   }

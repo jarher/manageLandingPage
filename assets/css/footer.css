@@ -5,6 +5,7 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  position: relative;
 }
 footer form {
   display: grid;
@@ -96,7 +97,7 @@ footer form button:hover {
 .social-media-container menu li:hover path {
   fill: var(--Bright-Red);
 }
-footer .logo-container{
+footer .logo-container {
   width: auto;
 }
 .logo-name {
@@ -107,11 +108,85 @@ footer .logo-container{
   font-size: 0.6rem;
   text-align: center;
 }
-
+@media (min-width: 768px) {
+  footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  footer form {
+    width: 100%;
+    margin: auto 15%;
+  }
+  .footer-nav-container,
+  .social-media-container {
+    width: 48%;
+  }
+  .social-media-container {
+    align-self: baseline;
+    justify-self: end;
+    top: 0;
+  }
+  footer .logo-container,
+  .copyright {
+    width: 100%;
+    text-align: center;
+  }
+  .copyright {
+    font-size: 0.8rem;
+  }
+}
 @media (min-width: 1024px) {
   footer {
+    align-items: baseline;
+    justify-content: space-between;
+    /* gap: 100px; */
+    padding: 5% 10%;
+  }
+  footer .logo-container {
+    order: 1;
+    width: auto;
+  }
+  .footer-nav-container {
+    order: 2;
+  }
+  .footer-nav-container menu {
+    margin: 0;
+  }
+  footer form {
+    order: 3;
+    width: 20%;
+    margin: 0;
+  }
+  footer form input:focus {
+    outline: 2px solid var(--Bright-Red);
+  }
+  .copyright,
+  .social-media-container {
+    bottom: 25%;
+
+  }
+  .social-media-container {
+    align-self:normal;
+    position: absolute;
+    left: 10%;
+    width: 12%;
+    top: auto;
+  }
+  .social-media-container menu {
+    margin: 0;
+    justify-content: space-between;
+  }
+  .social-media-container menu li a svg {
+    transform: scale(1);
+  }
+  .copyright {
+    font-size: 0.8rem;
+    position: absolute;
+    width: auto;
+    right: 10%;
+  }
+  /* footer {
     padding: 3% 10%;
-    flex-direction: row;
     justify-content: space-between;
     position: relative;
     align-items: baseline;
@@ -133,11 +208,11 @@ footer .logo-container{
   }
   .footer-nav-container menu {
     margin: 0;
-  }
-  .copyright,
+  }.copyright,
   .social-media-container {
     bottom: 20%;
   }
+  
   .social-media-container {
     position: absolute;
     left: 10%;
@@ -155,10 +230,11 @@ footer .logo-container{
   }
   footer .logo-container {
     order: 1;
+    width: auto;
   }
   .copyright {
     position: absolute;
     right: 10%;
     margin: 0;
-  }
+  } */
 }

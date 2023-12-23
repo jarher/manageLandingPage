@@ -11,7 +11,7 @@
 }
 .additional-information-content p {
   color: var(--Dark-Grayish-Blue);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   line-height: 1.5rem;
 }
 .additional-information-items-container {
@@ -45,6 +45,24 @@
   margin-right: 20px;
   line-height: 1.3rem;
 }
+@media (min-width: 768px) {
+  .additional-information-items-container {
+    display: flex;
+    gap: 3px;
+    padding: 0 2%;
+  }
+  .indicator-title {
+    font-size: 0.6rem;
+  }
+  .indicator-number {
+    padding: 5px;
+    width: auto;
+    border-radius: 50%;
+  }
+  .item-description {
+    font-size: 0.8rem;
+  }
+}
 @media (min-width: 1024px) {
   .additional-information {
     margin: 0 10%;
@@ -71,6 +89,7 @@
   }
   .additional-information-items-container {
     margin-left: 15px;
+    flex-direction: column;
   }
   .additional-information-item {
     margin: 25px 0;

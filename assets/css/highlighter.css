@@ -18,6 +18,21 @@
   width: 80%;
   margin: 20px auto;
 }
+@media (min-width: 768px) {
+  .highlighter-image-container {
+    width: 25%;
+    margin: auto;
+  }
+  .pattern-1 {
+    width: 37%;
+  }
+  .hightlighter-description-content h1 {
+    font-size: 1.5rem;
+  }
+  .hightlighter-description-content p {
+    font-size: 0.9rem;
+  }
+}
 @media (min-width: 1024px) {
   .highlighter {
     margin: 3% 10% 0;
